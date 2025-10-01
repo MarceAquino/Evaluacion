@@ -19,7 +19,7 @@ export class GestorDeArchivos {
   private constructor() {
     this.archivos = [];
     this.fabricaAcciones = new FabricaDeAcciones();
-    this.sistemaOperativo = new SistemaOperativo(100); 
+    this.sistemaOperativo = new SistemaOperativo(100*1024*1024); 
     this.historialEliminados = new HistorialEliminados();
   }
 
@@ -81,6 +81,13 @@ export class GestorDeArchivos {
         switch (tipo) {
 
           case TipoAccion.BORRAR:
+            const index = this.archivos.indexOf(archivo);
+                    if (index > -1) {
+                        this.archivos.splice(index, 1);
+                        this.historialEliminados.agregarAlHistorial(archivo,new Date());
+                        this.sistemaOperativo.liberarEspacio(archivo.getTamanio());
+                        console.log(`✓ Archivo eliminado del sistema`);
+                    }
             break;
 
           case TipoAccion.RENOMBRAR:
