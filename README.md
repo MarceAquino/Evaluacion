@@ -1,4 +1,4 @@
-# Sistema Gestor de Archivos
+yu# Sistema Gestor de Archivos
 
 ## Descripción General
 
@@ -202,33 +202,6 @@ tipos.forEach((tipo) => {
   const accion = fabricaAcciones.crearAccion(tipo, archivo, parametro, so);
   accion.ejecutar(); // Polimorfismo en acción
 });
-```
-
-## Puntos Fuertes para Evaluación
-
-### Implementación correcta de Singleton
-
-- Constructor privado y método getInstancia() apropiados
-- Lazy initialization y thread-safety considerado
-- Único punto de acceso global al gestor
-
-### Implementación robusta de Factory
-
-- Separación clara entre creación y uso de objetos
-- Extensible para nuevos tipos sin modificar código existente
-- Reduce acoplamiento entre componentes
-
-### Buenas prácticas de diseño
-
-- Uso apropiado de clases abstractas y herencia
-- Encapsulación de datos con getters/setters
-- Manejo de errores y validaciones
-- Código bien documentado y autoexplicativo
-
----
-
-**Desarrollado por:** MarceAquino  
+``` 
 **Materia:** Metodología de Sistemas II  
 **Fecha:** Octubre 2025
-
-> Este proyecto demuestra la aplicación práctica de patrones de diseño fundamentales en un sistema real, siguiendo las mejores prácticas de programación orientada a objetos.
