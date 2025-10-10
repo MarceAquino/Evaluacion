@@ -1,4 +1,4 @@
-yu# Sistema Gestor de Archivos
+##NUEVO ARCHIVO AGREGADO RECUPERATORIO.TS UNA REINTERPRETACION DEL FACTORY
 
 ## Descripción General
 
